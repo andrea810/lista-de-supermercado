@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div th:fragment="content">
+      <h2>Nova Lista de Compras</h2>
+
+      <form th:action="@{/listas}" method="post">
+        <div class="mb-3">
+          <label for="titulo" class="form-label">Título da Lista</label>
+          <input
+            type="text"
+            class="form-control"
+            id="titulo"
+            name="titulo"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="/listas" class="btn btn-secondary">Cancelar</a>
+      </form>
+    </div>
+  </body>
+</html>

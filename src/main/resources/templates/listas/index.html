@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div th:fragment="content">
+      <h2>Minhas Listas de Compras</h2>
+
+      <a href="/listas/nova" class="btn btn-primary mb-3">Nova Lista</a>
+
+      <div class="list-group">
+        <div th:each="lista : ${listas}" class="list-group-item">
+          <h5 th:text="${lista.titulo}">Título da Lista</h5>
+          <a
+            th:href="@{/listas/{id}(id=${lista.id})}"
+            class="btn btn-sm btn-info"
+            >Ver Lista</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
