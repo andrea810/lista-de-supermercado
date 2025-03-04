@@ -23,9 +23,9 @@ function marcarComoComprado(listaId, itemId) {
 
 // Função para confirmar exclusão de item
 function confirmarExclusao(listaId, itemId) {
-  if (confirm("Tem certeza que deseja excluir este item?")) {
-    window.location.href = `/listas/${listaId}/itens/${itemId}/delete`;
-  }
+    if (confirm("Tem certeza que deseja excluir este item?")) {
+        window.location.href = `/listas/${listaId}/itens/${itemId}/delete`;
+    }
 }
 
 // Função para exportar lista em PDF

@@ -22,9 +22,6 @@ public class ItemService {
     }
 
     public void deleteById(Long id) {
-        if (!itemRepository.existsById(id)) {
-            throw new EntityNotFoundException("Item não encontrado");
-        }
         itemRepository.deleteById(id);
     }
 

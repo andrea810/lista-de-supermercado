@@ -42,9 +42,8 @@ public class ItemController {
         itemService.marcarComoComprado(id);
         return "redirect:/listas/" + listaId;
     }
-
-    @DeleteMapping("/{id}")
-    public String removerItem(@PathVariable Long listaId, @PathVariable Long id) {
+    @GetMapping("/{id}/delete")
+    public String excluirItem(@PathVariable Long listaId, @PathVariable Long id) {
         itemService.deleteById(id);
         return "redirect:/listas/" + listaId;
     }
