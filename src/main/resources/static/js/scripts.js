@@ -24,8 +24,28 @@ function marcarComoComprado(listaId, itemId) {
 // Função para confirmar exclusão de item
 function confirmarExclusao(listaId, itemId) {
     if (confirm("Tem certeza que deseja excluir este item?")) {
-        window.location.href = `/listas/${listaId}/itens/${itemId}/delete`;
+        window.location.href = `http://localhost:8081/listas/${listaId}/itens/${itemId}/delete`;
     }
+}
+
+// Remove the duplicate marcarComoComprado function and update the existing one
+function marcarComoComprado(listaId, itemId) {
+    fetch(`/listas/${listaId}/itens/${itemId}/comprado`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao marcar item');
+        }
+        window.location.reload();
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        alert('Erro ao marcar o item como comprado');
+    });
 }
 
 // Função para exportar lista em PDF

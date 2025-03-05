@@ -66,18 +66,20 @@
         >
           <!-- Inside the item list div -->
           <div class="d-flex justify-content-between align-items-center">
-              <div>
+              <div style="width: 60%">
                   <input type="checkbox" th:checked="${item.comprado}"
                          th:onclick="'marcarComoComprado(' + ${lista.id} + ',' + ${item.id} + ')'"
                          class="form-check-input me-2" />
-                  <span th:text="${item.descricao + ' - ' + item.quantidade + ' ' + item.unidadeMedida}"></span>
+                  <span th:text="${item.descricao}"></span>
               </div>
-              <div>
+              <div style="width: 15%" class="text-center">
+                  <span th:text="${item.quantidade}"></span>
+              </div>
+              <div style="width: 25%" class="text-end">
                   <span class="badge bg-primary" th:text="${item.categoria}"></span>
                   <button type="button" class="btn btn-danger btn-sm ms-2" 
-                          th:onclick="'confirmarExclusao(' + ${lista.id} + ',' + ${item.id} + ')'">
-                      <i class="bi bi-trash"></i> X
-                  </button>
+                          th:onclick="'confirmarExclusao(' + ${lista.id} + ',' + ${item.id} + ')'"
+                          title="Excluir item">X</button>
               </div>
           </div>
         </div>

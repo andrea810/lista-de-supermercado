@@ -37,7 +37,8 @@ public class ItemController {
         return "redirect:/listas/" + listaId;
     }
 
-    @PutMapping("/{id}/comprado")
+    // Change from @PutMapping to @GetMapping
+    @PostMapping("/{id}/comprado")
     public String marcarComoComprado(@PathVariable Long listaId, @PathVariable Long id) {
         itemService.marcarComoComprado(id);
         return "redirect:/listas/" + listaId;
