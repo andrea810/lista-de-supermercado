@@ -50,7 +50,7 @@ function marcarComoComprado(listaId, itemId) {
 
 // Função para exportar lista em PDF
 function exportarPDF(listaId) {
-  window.open(`/listas/${listaId}/pdf`, "_blank");
+    window.open(`/listas/${listaId}/pdf`, "_blank");
 }
 
 // Validação do formulário de adição de item
