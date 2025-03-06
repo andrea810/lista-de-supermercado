@@ -53,6 +53,8 @@
               ></option>
             </select>
           </div>
+
+          <!-- In the form section -->
           <div class="col-md-2">
             <button type="submit" class="btn btn-primary w-100">
               Adicionar
@@ -69,6 +71,7 @@
           th:each="item : ${lista.itens}"
           th:class="${item.comprado ? 'list-group-item list-group-item-light' : 'list-group-item'}"
         >
+          <!-- In the item list section -->
           <div class="row align-items-center">
             <div class="col-md-4">
               <input
@@ -86,12 +89,9 @@
               <span class="badge bg-primary" th:text="${item.categoria}"></span>
             </div>
             <div class="col-md-2 text-center">
-              <button
-                type="button"
-                class="btn btn-danger btn-sm"
-                th:onclick="'confirmarExclusao(' + ${lista.id} + ',' + ${item.id} + ')'"
-              >
-                X
+              <button type="button" class="btn btn-danger btn-sm" 
+                      th:onclick="'confirmarExclusao(' + ${lista.id} + ',' + ${item.id} + ')'">
+                <i class="bi bi-trash-fill text-white"></i>
               </button>
             </div>
           </div>
