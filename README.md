@@ -58,7 +58,9 @@ Este é um projeto desenvolvido em **Spring Boot** que permite criar e gerenciar
 
 3. **Acesse a aplicação**
 
-   Abra seu navegador e acesse: `http://localhost:3000`
+ Abra seu navegador e acesse: `http://localhost:3000`
+
+ <img width="1506" height="671" alt="image" src="https://github.com/user-attachments/assets/032e4d61-290b-4940-a8cf-7c9a0420c2da" />
 
 ## 📖 Como Usar
 
@@ -71,6 +73,11 @@ Este é um projeto desenvolvido em **Spring Boot** que permite criar e gerenciar
    - Use o checkbox para marcar como comprado
    - Use o botão de lixeira para remover itens
 5. **Imprimir**: Use o botão "Imprimir" para uma versão otimizada para papel
+
+<img width="909" height="692" alt="image" src="https://github.com/user-attachments/assets/9ee6467e-7b21-4d8d-86d4-ee05cf4a6c42" />
+
+
+   
 
 ## 🗂️ Estrutura do Projeto
 
