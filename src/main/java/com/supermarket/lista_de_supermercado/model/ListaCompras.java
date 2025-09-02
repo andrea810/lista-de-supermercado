@@ -1,6 +1,7 @@
 package com.supermarket.lista_de_supermercado.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 import java.util.ArrayList;

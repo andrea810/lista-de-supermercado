@@ -16,8 +16,6 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 import com.supermarket.lista_de_supermercado.model.enums.Categoria;
-import com.supermarket.lista_de_supermercado.model.enums.Prioridade;
-import com.supermarket.lista_de_supermercado.model.enums.UnidadeMedida;
 
 import lombok.Data;
 
@@ -40,9 +38,6 @@ public class Item {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "lista_id")
     private ListaCompras lista;
-
-    @Enumerated(EnumType.STRING)
-    private UnidadeMedida unidadeMedida;
 
     @Enumerated(EnumType.STRING)
     private Categoria categoria;
